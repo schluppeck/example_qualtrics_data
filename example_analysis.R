@@ -3,6 +3,14 @@
 # ds 2024-02-23
 
 # load some help for data reading, good column names, tables
+# list of packages
+pkgs <- c("tidyverse", "janitor", "gt", "qualtRics")
+if (!all(pkgs %in% installed.packages())) {
+  # check they are all installed otherwise just do it.
+  install.packages(pkgs)
+} else {
+  message("-- all good, packages installed already -- ")
+}
 
 library(tidyverse)
 library(janitor)
