@@ -31,8 +31,14 @@ cleaned_up_data %>% select(q1,q2,q3) %>% write_csv("mysmall_table.csv")
 
 
 cleaned_up_data %>% 
-  ggplot(aes(x = q2)) +
+  ggplot(aes(x = duration_in_seconds)) +
     geom_histogram()
+
+cleaned_up_data %>% 
+  ggplot(aes(x = q4_1)) +
+  geom_bar() + coord_flip()
+
+(cleaned_up_data)
 
 mean(cleaned_up_data$q2, na.rm = TRUE)
 median(cleaned_up_data$q2, na.rm = TRUE)
